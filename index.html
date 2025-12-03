@@ -1,0 +1,130 @@
+<!--
+File bundle: 3 files for a "جبار" (awesome) landing page
+Save each section below into separate files:
+  - index.html
+  - styles.css
+  - script.js
+--> 
+
+<!-- ==== index.html ==== -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تصميم جبار — Landing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="#">جبار<span>Design</span></a>
+      <button id="menuBtn" class="hamburger" aria-label="قائمة">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">مميزات</a></li>
+        <li><a href="#works">أعمالنا</a></li>
+        <li><a href="#contact">تواصل</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">تصميم جبار — واجهات تسرق الأنظار</h1>
+        <p class="hero-sub">تصاميم سريعة، متجاوبة، وتجربة مستخدم لا تُنسى. جاهز لتطوير مشروعك؟</p>
+        <div class="cta-row">
+          <a class="btn primary" id="ctaDemo">عرض تجريبي</a>
+          <a class="btn ghost" href="#works">شاهد الأعمال</a>
+        </div>
+        <div class="stats">
+          <div><strong>120+</strong><span>مشروعًا</span></div>
+          <div><strong>98%</strong><span>رضا العملاء</span></div>
+          <div><strong>24/7</strong><span>دعم</span></div>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div class="device">
+          <canvas id="waveCanvas"></canvas>
+          <div class="device-screen">
+            <div class="card-grid">
+              <article class="mini-card">تصميم واجهات</article>
+              <article class="mini-card">تجربة مستخدم</article>
+              <article class="mini-card">تطوير كامل</article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="features" class="container features">
+      <h2>مميزاتنا</h2>
+      <div class="features-grid">
+        <article class="feature">
+          <h3>تصميم عصري</h3>
+          <p>واجهات نظيفة ومرتبة تركز على قابلية الاستخدام.</p>
+        </article>
+        <article class="feature">
+          <h3>أداء فائق</h3>
+          <p>تحسين سرعة التحميل وتجربة سلسة على كل الأجهزة.</p>
+        </article>
+        <article class="feature">
+          <h3>دعم دائم</h3>
+          <p>نصائح، تحديثات وصيانة متواصلة.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="works" class="container works">
+      <h2>أعمالنا</h2>
+      <div class="works-grid">
+        <div class="work-card" tabindex="0">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23E9F2FF'/><text x='50%' y='50%' font-size='24' dominant-baseline='middle' text-anchor='middle' fill='%23666'>معاينة</text></svg>" alt="preview"/>
+          <h4>متجر إلكتروني</h4>
+        </div>
+        <div class="work-card" tabindex="0">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23FFEFE9'/><text x='50%' y='50%' font-size='24' dominant-baseline='middle' text-anchor='middle' fill='%23666'>معاينة</text></svg>" alt="preview"/>
+          <h4>لوحة تحكم</h4>
+        </div>
+        <div class="work-card" tabindex="0">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23E9FFE9'/><text x='50%' y='50%' font-size='24' dominant-baseline='middle' text-anchor='middle' fill='%23666'>معاينة</text></svg>" alt="preview"/>
+          <h4>تطبيق ويب</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>تواصل معنا</h2>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="اسمك" required />
+        <input type="email" placeholder="بريدك الإلكتروني" required />
+        <textarea placeholder="رسالتك" rows="4"></textarea>
+        <div class="form-actions">
+          <button class="btn primary" id="sendBtn">أرسل</button>
+          <button class="btn ghost" type="reset">إعادة</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> تصميم جبار — كل الحقوق محفوظة</p>
+      <div class="socials">
+        <a href="#">ف</a><a href="#">ت</a><a href="#">ي</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ==== script.js ==== -->
